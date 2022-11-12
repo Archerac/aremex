@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script src="src/themes/__/dist/global.js" defer></script>
+  <script src="src/themes/__/dist/home.js" defer></script>
+  <link rel="preload" as="font" type="font/woff2" href="src/themes/__/fonts/Proxima-Nova-Alt-Bold-webfont.woff" crossorigin>
+  <link rel="stylesheet" href="src/themes/__/dist/global.css">
+  <link rel="stylesheet" href="src/themes/__/dist/home.css">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0">
+  <meta name="theme-color" content="#06151C">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>ARCHER | Excellence in Materials Technology</title>
+	<link rel="canonical" href="https://archerx.com.au" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.2.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="https://www.googletagmanager.com/gtag/js?id=UA-116288402-1" type="text/javascript" data-cfasync="false" async></script>
+			<script type="text/javascript" data-cfasync="false">
+				var mi_version = '8.2.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+								var disableStrs = [
+															'ga-disable-UA-116288402-1',
+									];
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						if ( document.cookie.indexOf( disableStrs[ index ] + '=true' ) > -1 ) {
+							return true;
+						}
+					}
+					return false;
+				}
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						document.cookie = disableStrs[ index ] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if ( mi_track_user ) {
+					function __gtagDataLayer() {
+						dataLayer.push( arguments );
+					}
+					function __gtagTracker( type, name, parameters ) {
+						if (!parameters) {
+							parameters = {};
+						}
+						if (parameters.send_to) {
+							__gtagDataLayer.apply( null, arguments );
+							return;
+						}
+						if ( type === 'event' ) {
+															parameters.send_to = monsterinsights_frontend.ua;
+								__gtagDataLayer( type, name, parameters );
+													} else {
+							__gtagDataLayer.apply( null, arguments );
+						}
+					}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+											} );
+															__gtagTracker( 'config', 'UA-116288402-1', {"forceSSL":"true"} );
+										window.gtag = __gtagTracker;										(
+						function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
+											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+								function mapArgs( args ) {
+									var arg, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
+									};
+									for ( arg in args ) {
+																				if ( ! ( ! args.hasOwnProperty(arg) || ! gaMap.hasOwnProperty(arg) ) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
+										}
+									}
+									return hit;
+								}
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						}
+					)();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<link rel="stylesheet" id="wp-block-library-css" href="wp/wp-includes/css/dist/block-library/style.css" type="text/css" media="all"/>
+<script type="text/javascript" id="monsterinsights-frontend-script-js-extra">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/archerx.com.au","hash_tracking":"false","ua":"UA-116288402-1","v4_id":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="src/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.js" id="monsterinsights-frontend-script-js"></script>
+<link rel="icon" href="src/uploads/2018/03/icon-150x150.png" sizes="32x32"/>
+<link rel="icon" href="src/uploads/2018/03/icon-300x300.png" sizes="192x192"/>
+<link rel="apple-touch-icon" href="src/uploads/2018/03/icon-300x300.png"/>
+<meta name="msapplication-TileImage" content="https://archerx.com.au/src/uploads/2018/03/icon-300x300.png"/>
+  <link rel="prefetch" href="https://archerx.com.au/src/themes/__/dist/our-business.css?ver=1654684358">
+  <link rel="prefetch" href="https://archerx.com.au/src/themes/__/dist/our-business.js?ver=1654684358">
+  <link rel="prefetch" href="https://archerx.com.au/src/themes/__/dist/investors.css?ver=1654684358">
+  <link rel="prefetch" href="https://archerx.com.au/src/themes/__/dist/investors.js?ver=1654684358">
+  <link rel="prefetch" href="https://archerx.com.au/src/themes/__/dist/default.css?ver=1654684358">
+</head>
+<body>
+  <div id="wrapper">
+    <header class="site-header" id="Header">
+  <a href="/" class="site-header__archer"><img src="src/themes/__/images/Archer.svg" alt="Archer" class="site-header__archer__logo"></a>
+  <nav class="site-header__nav">
+    <a id="SiteHeaderToggle" href="javascript:;" class="site-header__toggle" style="right: 1rem;">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </a>
+    <div class="site-header__list"> 
+      <a href="our-business/" class="site-header__page" style="transition: transform 0.4s ease-out, opacity 0.4s ease-out;">Our Business</a>
+      <a href="investors/" class="site-header__page" style="transition: transform 0.45s ease-out, opacity 0.45s ease-out;">Investors</a>
+      <a href="newsroom/" class="site-header__page" style="transition: transform 0.5s ease-out, opacity 0.5s ease-out;">Newsroom</a>
+      <a href="careers/" class="site-header__page" style="transition: transform 0.55s ease-out, opacity 0.55s ease-out;">Careers</a>
+    </div>
+  </nav>
+</header>
+<div class="home">
+  <h1 class="hidden-heading">Archer</h1>
+  <nav class="home-nav" id="HomeNav">
+    <a href="#Mission" class="home-nav__step">Mission</a>
+    <a href="#Exploration" class="home-nav__step">Exploration</a>
+    <a href="#Innovation" class="home-nav__step">Innovation</a>
+    <a href="#Integration" class="home-nav__step">Integration</a>
+  </nav>
+  <section class="home__section home__mission" id="Mission">
+    <div class="home__inner">
+      <h2 class="home__section__heading"><span class="home__section__logo">Archer</span> is a materials technology&nbsp;company</h2>
+      <div class="home__section__copy">We’re creating technology that could spur transformational solutions to complex global challenges.</div>
+    </div>
+  </section>
+  <section class="home__section" id="Innovation">
+    <div class="home__inner">
+      <h2 class="home__section__heading">Advanced materials to underpin technology</h2>
+      <div class="home__section__copy">We’re developing the next generation of semiconductors for an increasingly mobile and data centric world. Our innovative materials include carbon-based qubits for quantum computing, graphene for enhanced biosensors and&nbsp;more.</div>
+    </div>
+  </section>
+  <section class="home__section" id="Exploration">
+    <div class="home__inner">
+      <h2 class="home__section__heading">Technologies to shape future economies</h2>
+      <div class="home__section__copy">We’re building devices that push the boundaries of modern technology. Our development spans quantum computing qubit processors, lab-on-chip biosensors, and&nbsp;more.</div>
+    </div>
+  </section>
+  <section class="home__section" id="Integration">
+    <div class="home__inner">
+      <h2 class="home__section__heading">Deep tech with global&nbsp;impact</h2>
+      <div class="home__section__copy">Our approach to materials technology could enable a new wave of semiconductor chip technologies, each with the potential to positively impact global industries.</div>
+      <div class="home__tabs one" id="Tabs">
+        <section class="home__tab current" id="QuantumTechnology">
+          <a href="#QuantumTechnology" class="home__tab__link"><h3 class="home__tab__heading">Quantum<br>Technology</h3></a>
+          <div class="home__tab__copy">
+            <p class="home__tab__p">Materials that enable quantum information processing could transform all industries dependent on computational power. The development of our 12CQ qubit processor chip could provide a potential solution to room-temperature quantum computing and enable direct consumer ownership of quantum computing powered technology.</p>
+            <div class="case__partners">
+                <div class="case__partners__item">
+                  <a href="https://www.ibm.com/quantum-computing/network/members/" class="case__partners__link case__partners__link--IBM" rel="external noopener" target="_blank">
+                    <img src="src/themes/__/images/IBMQ.svg" alt="IBM Q Network" class="case__partners__logo">
+                  </a>
+                  <p class="case__partners__desc">Archer is a member of the IBM Q Network and the associated Quantum Startup Program.</p>
+                </div>
+                <div class="case__partners__item">
+                    <a href="https://www.nvidia.com/en-sg/deep-learning-ai/startups/" class="case__partners__link case__partners__link--NVIDIA" rel="external noopener" target="_blank">
+                      <img src="src/themes/__/images/nvidia-inception.svg" alt="NVIDIA Inception Program" class="case__partners__logo">
+                    </a>
+                    <p class="case__partners__desc">Archer is a member of the NVIDIA Inception Program.</p>
+                </div>
+            </div>
+          </div>
+        </section><section class="home__tab" id="HumanHealth">
+          <a href="#HumanHealth" class="home__tab__link"><h3 class="home__tab__heading">Human<br>Health</h3></a>
+          <div class="home__tab__copy">
+            <p class="home__tab__p">Materials in complex biosensing devices provide the means to identify disease and infection. We are developing a potential solution to lab-on-a-chip diagnostics that involves biosensors that could aid point of care disease management.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="visualisation" id="Visualisation"></div>
+  <footer class="site-footer" id="Footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__left">
+      <a href="/" class="site-footer__archer"><img src="src/themes/__/images/Archer.svg" alt="Archer" class="site-footer__archer__logo"></a>
+    </div>
+    <div class="site-footer__contact">
+      <div class="site-footer__group">
+        <h3 class="site-footer__heading">Adelaide</h3>
+        <dl class="site-footer__contact__list">
+          <dt class="site-footer__contact__point--address">Address</dt>
+          <dd class="site-footer__contact__value--address"><a href="https://www.google.com/maps/place/Lot+Fourteen/@-34.9208606,138.6060932,17z/data=!3m1!4b1!4m5!3m4!1s0x6ab0c96a9525293f:0x43e32ddda9323947!8m2!3d-34.920865!4d138.6082819" class="site-footer__contact__link" rel="external noopener" target="_blank">Lot Fourteen, Frome Road<br>Adelaide SA 5000<br>Australia</a></dd>
+          <dt class="site-footer__contact__point"><span class="site-footer__contact__point__first">E</span>mail</dt>
+          <dd class="site-footer__contact__value"><a href="mailto:hello@archerx.com.au" class="site-footer__contact__link">hello@archerx.com.au</a></dd>
+          <dt class="site-footer__contact__point"><span class="site-footer__contact__point__first">P</span>hone</dt>
+          <dd class="site-footer__contact__value"><a href="tel:+61882723288" class="site-footer__contact__link">+61 8 8272 3288</a></dd>
+          <dt class="site-footer__contact__point"><span class="site-footer__contact__point__first">F</span>ax</dt>
+          <dd class="site-footer__contact__value"><a href="tel:+61882723888" class="site-footer__contact__link">+61 8 8272 3888</a></dd>
+        </dl>
+      </div>
+      <div class="site-footer__group site-footer__group--syd">
+        <h3 class="site-footer__heading">Sydney</h3>
+        <dl class="site-footer__contact__list">
+          <dt class="site-footer__contact__point--address">Address</dt>
+          <dd class="site-footer__contact__value--address"><a href="https://www.google.com/maps/place/17-19+Bridge+St,+Sydney+NSW+2000" class="site-footer__contact__link" rel="external noopener" target="_blank">Level 4, 17-19 Bridge Street<br>Sydney NSW 2000<br>Australia</a></dd>
+          <dt class="site-footer__contact__point"><span class="site-footer__contact__point__first">E</span>mail</dt>
+          <dd class="site-footer__contact__value"><a href="mailto:hello@archerx.com.au" class="site-footer__contact__link">hello@archerx.com.au</a></dd>
+          <dt class="site-footer__contact__point"><span class="site-footer__contact__point__first">P</span>hone</dt>
+          <dd class="site-footer__contact__value"><a href="tel:+61280913240" class="site-footer__contact__link">+61 2 8091 3240</a></dd>
+          <dt class="site-footer__contact__point"><span class="site-footer__contact__point__first">F</span>ax</dt>
+          <dd class="site-footer__contact__value"><a href="tel:+61247442451" class="site-footer__contact__link">+61 2 4744 2451</a></dd>
+        </dl>
+      </div>
+      <div class="site-footer__social">
+        <h3 class="site-footer__heading">Follow us</h3>
+        <a href="https://www.linkedin.com/company/22318273/" class="site-footer__contact__social-link__link linkedin" rel="external noopener" target="_blank"><img src="src/themes/__/images/LinkedIn.svg" alt="LinkedIn" class="site-footer__contact__social-link__icon"></a>
+        <a href="https://twitter.com/archerxau" class="site-footer__contact__social-link__link twitter" rel="external noopener" target="_blank"><img src="src/themes/__/images/Twitter.svg" alt="Twitter" class="site-footer__contact__social-link__icon"></a>
+        <a href="https://www.youtube.com/channel/UClKzlzNHG2Ujv60etVOFLsA" class="site-footer__contact__social-link__link youtube" rel="external noopener" target="_blank"><img src="src/themes/__/images/Youtube.svg" alt="YouTube" class="site-footer__contact__social-link__icon"></a>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <small class="site-footer__legal__inner">
+        <span class="site-footer__legal__copyright">&copy; 2022 Archer Materials</span>
+        <span class="site-footer__legal__divider"></span>
+        <a href="corporate-governance/" class="site-footer__legal__link">Corporate Governance</a>
+        <span class="site-footer__legal__divider"></span>
+        <a href="privacy-policy/" class="site-footer__legal__link">Privacy Policy</a>
+      </small>
+      <a href="https://www.s1t2.com.au/" class="site-footer__legal__s1t2" rel="external noopener" target="_blank">Created by S1T2</a>
+    </div>
+  </div>
+</footer>
+</div>
+<script type="text/javascript" src="wp/wp-includes/js/wp-embed.js" id="wp-embed-js"></script>
+<center><font size="2">This is a free demo result from the Wayback Machine Downloader. <a href="http://www.waybackmachinedownloads.com">Click here</a> to download the full version.</font></center></body>
+</html>
